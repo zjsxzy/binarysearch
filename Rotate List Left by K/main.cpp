@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define PB push_back
+#define SZ(v) ((int)(v).size())
+#define abs(x) ((x) > 0 ? (x) : -(x))
+typedef long long LL;
+
+vector<int> solve(vector<int>& nums, int k) {
+    int n = nums.size();
+    vector<int> res(n);
+    for (int i = 0; i < n; i++) {
+        res[i] = nums[(i + k) % n];
+    }
+    return res;
+}
+
+int main() {
+#ifndef ONLINE_JUDGE
+    freopen("in.txt", "r", stdin);
+#endif
+    solve();
+    return 0;
+}
+
